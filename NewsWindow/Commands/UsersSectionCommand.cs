@@ -38,6 +38,7 @@ namespace NewsWindow.Commands
         public UserViewModel UserViewModel { get; set; }
         public void Execute(object parameter)
         {
+            
             UserViewModel = new UserViewModel();
             using (PostDbEntities2 dbcontext = new PostDbEntities2())
             {

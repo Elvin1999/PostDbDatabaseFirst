@@ -15,7 +15,7 @@
             <Grid Grid.Row="0">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Orientation="Vertical">
-                        <Label Width="130" Height="40" Content="Name" FontSize="19" Margin="5,15,0,0"></Label>
+                        <Label Width="130" Height="40" Content="Username" FontSize="19" Margin="5,15,0,0"></Label>
                         <Label Width="130" Height="40" Content="Password" FontSize="19" Margin="5,15,0,0"></Label>
 
                     </StackPanel>
@@ -57,7 +57,7 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Name" Width="200">
+                            <GridViewColumn Header="Username" Width="200">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Padding="5,0" Text="{Binding Username}"></TextBlock>

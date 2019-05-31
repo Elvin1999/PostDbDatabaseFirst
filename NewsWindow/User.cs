@@ -19,6 +19,17 @@ namespace NewsWindow
         {
             this.Comments = new HashSet<Comment>();
         }
+        public User Clone()
+        {
+            User user = new User()
+            {
+                  Id=this.Id,
+                   No=this.No,
+                    Password=this.Password,
+                     Username=this.Username,
+            };
+            return user;
+        }
         public int No { get; set; } = 0;
         public int Id { get; set; }
         public string Username { get; set; }

@@ -13,7 +13,7 @@ namespace NewsWindow.ViewModels
     {
 
         public AddCommand AddCommand => new AddCommand(this);
-        //public DeleteCommand DeleteCommand => new DeleteCommand(this);
+        public DeleteCommand DeleteCommand => new DeleteCommand(this);
         //public UpdateCommand UpdateCommand => new UpdateCommand(this);
         private ObservableCollection<User> allUsers;
         public ObservableCollection<User> AllUsers
@@ -60,7 +60,7 @@ namespace NewsWindow.ViewModels
                 selectedUser = value;
                 if (value != null)
                 {
-                    //CurrentUser = SelectedUser.Clone();
+                    CurrentUser = value.Clone();
                 }
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(SelectedUser)));
             }
