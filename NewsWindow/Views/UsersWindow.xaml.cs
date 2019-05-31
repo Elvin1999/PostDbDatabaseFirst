@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewsWindow.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace NewsWindow.Views
     /// </summary>
     public partial class UsersWindow : Window
     {
-        public UsersWindow()
+        public UserViewModel UserViewModel { get; set; }
+        public UsersWindow(UserViewModel UserViewModel)
         {
             InitializeComponent();
+            this.UserViewModel = UserViewModel;
+            DataContext = UserViewModel;
         }
     }
 }

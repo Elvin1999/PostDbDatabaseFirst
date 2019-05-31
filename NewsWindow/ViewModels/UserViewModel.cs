@@ -1,5 +1,4 @@
-﻿using NewsWindow.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -60,7 +59,7 @@ namespace NewsWindow.ViewModels
                 selectedUser = value;
                 if (value != null)
                 {
-                    CurrentUser = SelectedUser.Clone();
+                    //CurrentUser = SelectedUser.Clone();
                 }
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(SelectedUser)));
             }

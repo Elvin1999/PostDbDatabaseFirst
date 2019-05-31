@@ -1,4 +1,4 @@
-﻿using NewsWindow.Entities;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -59,7 +59,7 @@ namespace NewsWindow.ViewModels
                 selectedComment = value;
                 if (value != null)
                 {
-                    CurrentComment = SelectedComment.Clone();
+                    //CurrentComment = SelectedComment.Clone();
                 }
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(SelectedComment)));
             }

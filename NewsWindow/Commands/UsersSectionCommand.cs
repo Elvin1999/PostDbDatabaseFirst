@@ -1,6 +1,8 @@
 ﻿using NewsWindow.ViewModels;
+using NewsWindow.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,32 +21,34 @@ namespace NewsWindow.Commands
 
         public event EventHandler CanExecuteChanged;
 
-        public bool CanExecute(object parameter)F
+        public bool CanExecute(object parameter)
         {
             return true;
         }
         int count = 0;
         public void SetNoOfFilials()
         {
-            var count = MainViewModel.AllFilials.Count;
+            var count = UserViewModel.AllUsers.Count;
             for (int i = 0, i2 = 1; i < count; i++, i2++)
             {
 
-                FilialViewModel.AllFilials[i].No = i2;
+                UserViewModel.AllUsers[i].No = i2;
             }
         }
-            UserViewModel userViewModel = new UserViewModel();
+        public UserViewModel UserViewModel { get; set; }
         public void Execute(object parameter)
         {
-            using (UsersDbEntities dbcontext = new FilialDbEntities())
+            UserViewModel = new UserViewModel();
+            using (PostDbEntities2 dbcontext = new PostDbEntities2())
             {
-                FilialViewModel.AllFilials = new ObservableCollection<Filials>(dbcontext.Filials.ToList());
+                UserViewModel.AllUsers = new ObservableCollection<User>(dbcontext.Users.ToList());
 
                 //dbcontext.SaveChanges();
             }
             SetNoOfFilials();
-            DataContext = FilialViewModel;
 
+            UsersWindow usersWindow = new UsersWindow(UserViewModel);
+            usersWindow.ShowDialog();
         }
     }
 }

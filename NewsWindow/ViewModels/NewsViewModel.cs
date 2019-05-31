@@ -1,4 +1,4 @@
-﻿using NewsWindow.Entities;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -59,7 +59,7 @@ namespace NewsWindow.ViewModels
                 selectedNews = value;
                 if (value != null)
                 {
-                    CurrentNews = SelectedNews.Clone();
+                    //CurrentNews = SelectedNews.Clone();
                 }
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(SelectedNews)));
             }

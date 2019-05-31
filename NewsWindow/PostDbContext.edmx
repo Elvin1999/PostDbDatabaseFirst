@@ -131,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PostDbEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PostDbEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="News" EntityType="Self.News" />
           <EntitySet Name="Users" EntityType="Self.User" />
@@ -149,7 +149,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PostDbModelStoreContainer" CdmEntityContainer="PostDbEntities1">
+        <EntityContainerMapping StorageEntityContainer="PostDbModelStoreContainer" CdmEntityContainer="PostDbEntities2">
           <EntitySetMapping Name="Comments">
             <EntityTypeMapping TypeName="PostDbModel.Comment">
               <MappingFragment StoreEntitySet="Comments">
