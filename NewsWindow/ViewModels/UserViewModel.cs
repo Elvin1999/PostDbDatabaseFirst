@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewsWindow.Commands.UsersCommands;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ namespace NewsWindow.ViewModels
    public class UserViewModel:BaseViewModel
     {
 
-        //public AddCommand AddCommand => new AddCommand(this);
+        public AddCommand AddCommand => new AddCommand(this);
         //public DeleteCommand DeleteCommand => new DeleteCommand(this);
         //public UpdateCommand UpdateCommand => new UpdateCommand(this);
         private ObservableCollection<User> allUsers;

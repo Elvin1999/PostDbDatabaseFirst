@@ -20,7 +20,7 @@
 
                     </StackPanel>
                     <StackPanel  Orientation="Vertical">
-                        <TextBox Width="100" Height="40" FontSize="19" Margin="5,12" Text="{Binding CurrentUser.Name,Mode=TwoWay}">
+                        <TextBox Width="100" Height="40" FontSize="19" Margin="5,12" Text="{Binding CurrentUser.Username,Mode=TwoWay}">
 
                         </TextBox>
                         <TextBox Width="100" Height="40" FontSize="19" Margin="5,5" 
