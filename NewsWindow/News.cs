@@ -27,5 +27,19 @@ namespace NewsWindow
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }
+
+        public News Clone()
+        {
+            News news = new News()
+            {
+                 Comment=this.Comment,
+                // Comments=this.Comments
+                 CreateDate=this.CreateDate,
+                  Header=this.Header,
+                   Id=this.Id,
+                    No=this.No
+            };
+            return news;
+        }
     }
 }

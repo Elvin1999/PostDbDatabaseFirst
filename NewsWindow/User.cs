@@ -23,7 +23,18 @@ namespace NewsWindow
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-    
+        public User Clone()
+        {
+            User user = new User()
+            {
+                 //Comments=this.Comments,
+                  Id=this.Id,
+                   No=this.No,
+                    Password=this.Password,
+                     Username=this.Username
+            };
+            return user;
+        }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }
     }
