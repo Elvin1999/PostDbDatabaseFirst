@@ -26,7 +26,7 @@ namespace NewsWindow.Commands.UsersCommands
 
         public void Execute(object parameter)
         {
-            using (PostDbEntities2 cashDbContext = new PostDbEntities2())
+            using (PostDbEntities4 cashDbContext = new PostDbEntities4())
             {
 
                 List<string> errorMessages = new List<string>();

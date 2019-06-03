@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b78eae0d7f65497eb6e460b2b8069f01" Name="Diagram1">
+      <Diagram DiagramId="ba3ea0fbe8e041669ac46c761f4c9d06" Name="Diagram1">
         <EntityTypeShape EntityType="PostDbModel.Comment" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="PostDbModel.News" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="PostDbModel.User" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
-        <AssociationConnector Association="PostDbModel.FK__Comments__News_I__3B75D760" ManuallyRouted="false" />
-        <AssociationConnector Association="PostDbModel.FK__Comments__User_I__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="PostDbModel.FK__Comments__News_I__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="PostDbModel.FK__Comments__User_I__3C69FB99" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

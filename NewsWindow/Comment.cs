@@ -14,6 +14,7 @@ namespace NewsWindow
     
     public partial class Comment
     {
+        public int No { get; set; } = 0;
         public int Id { get; set; }
         public string Content { get; set; }
         public int User_Id { get; set; }

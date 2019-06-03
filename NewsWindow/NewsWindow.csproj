@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -68,28 +69,28 @@
     <Compile Include="Commands\UsersCommands\DeleteCommand.cs" />
     <Compile Include="Commands\UsersCommands\UpdateCommand.cs" />
     <Compile Include="Comment.cs">
-      <DependentUpon>PostDbContext.tt</DependentUpon>
+      <DependentUpon>Post1DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="News.cs">
-      <DependentUpon>PostDbContext.tt</DependentUpon>
+      <DependentUpon>Post1DbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="PostDbContext.Context.cs">
+    <Compile Include="Post1DbContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PostDbContext.Context.tt</DependentUpon>
+      <DependentUpon>Post1DbContext.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="PostDbContext.cs">
+    <Compile Include="Post1DbContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PostDbContext.tt</DependentUpon>
+      <DependentUpon>Post1DbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="PostDbContext.Designer.cs">
+    <Compile Include="Post1DbContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PostDbContext.edmx</DependentUpon>
+      <DependentUpon>Post1DbContext.edmx</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>PostDbContext.tt</DependentUpon>
+      <DependentUpon>Post1DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\CommentViewModel.cs" />
@@ -152,12 +153,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EntityDeploy Include="PostDbContext.edmx">
+    <EntityDeploy Include="Post1DbContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PostDbContext.Designer.cs</LastGenOutput>
+      <LastGenOutput>Post1DbContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="PostDbContext.edmx.diagram">
-      <DependentUpon>PostDbContext.edmx</DependentUpon>
+    <None Include="Post1DbContext.edmx.diagram">
+      <DependentUpon>Post1DbContext.edmx</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -174,15 +175,15 @@
     <Folder Include="Entities\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PostDbContext.Context.tt">
+    <Content Include="Post1DbContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PostDbContext.edmx</DependentUpon>
-      <LastGenOutput>PostDbContext.Context.cs</LastGenOutput>
+      <DependentUpon>Post1DbContext.edmx</DependentUpon>
+      <LastGenOutput>Post1DbContext.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="PostDbContext.tt">
+    <Content Include="Post1DbContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PostDbContext.edmx</DependentUpon>
-      <LastGenOutput>PostDbContext.cs</LastGenOutput>
+      <DependentUpon>Post1DbContext.edmx</DependentUpon>
+      <LastGenOutput>Post1DbContext.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

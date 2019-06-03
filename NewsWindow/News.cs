@@ -19,11 +19,11 @@ namespace NewsWindow
         {
             this.Comments = new HashSet<Comment>();
         }
-    
+        public int No { get; set; } = 0;
         public int Id { get; set; }
         public string Comment { get; set; }
         public string Header { get; set; }
-        public System.DateTime CreationDate { get; set; }
+        public System.DateTime CreateDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }

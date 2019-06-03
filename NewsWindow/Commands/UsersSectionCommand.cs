@@ -40,7 +40,7 @@ namespace NewsWindow.Commands
         {
             
             UserViewModel = new UserViewModel();
-            using (PostDbEntities2 dbcontext = new PostDbEntities2())
+            using (PostDbEntities4 dbcontext = new PostDbEntities4())
             {
                 UserViewModel.AllUsers = new ObservableCollection<User>(dbcontext.Users.ToList());
 
