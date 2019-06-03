@@ -69,28 +69,28 @@
     <Compile Include="Commands\UsersCommands\DeleteCommand.cs" />
     <Compile Include="Commands\UsersCommands\UpdateCommand.cs" />
     <Compile Include="Comment.cs">
-      <DependentUpon>Post1DbContext.tt</DependentUpon>
+      <DependentUpon>PostDbContext4.tt</DependentUpon>
     </Compile>
     <Compile Include="News.cs">
-      <DependentUpon>Post1DbContext.tt</DependentUpon>
+      <DependentUpon>PostDbContext4.tt</DependentUpon>
     </Compile>
-    <Compile Include="Post1DbContext.Context.cs">
+    <Compile Include="PostDbContext4.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Post1DbContext.Context.tt</DependentUpon>
+      <DependentUpon>PostDbContext4.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Post1DbContext.cs">
+    <Compile Include="PostDbContext4.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Post1DbContext.tt</DependentUpon>
+      <DependentUpon>PostDbContext4.tt</DependentUpon>
     </Compile>
-    <Compile Include="Post1DbContext.Designer.cs">
+    <Compile Include="PostDbContext4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Post1DbContext.edmx</DependentUpon>
+      <DependentUpon>PostDbContext4.edmx</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>Post1DbContext.tt</DependentUpon>
+      <DependentUpon>PostDbContext4.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\CommentViewModel.cs" />
@@ -153,12 +153,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EntityDeploy Include="Post1DbContext.edmx">
+    <EntityDeploy Include="PostDbContext4.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Post1DbContext.Designer.cs</LastGenOutput>
+      <LastGenOutput>PostDbContext4.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Post1DbContext.edmx.diagram">
-      <DependentUpon>Post1DbContext.edmx</DependentUpon>
+    <None Include="PostDbContext4.edmx.diagram">
+      <DependentUpon>PostDbContext4.edmx</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -175,15 +175,15 @@
     <Folder Include="Entities\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Post1DbContext.Context.tt">
+    <Content Include="PostDbContext4.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Post1DbContext.edmx</DependentUpon>
-      <LastGenOutput>Post1DbContext.Context.cs</LastGenOutput>
+      <DependentUpon>PostDbContext4.edmx</DependentUpon>
+      <LastGenOutput>PostDbContext4.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Post1DbContext.tt">
+    <Content Include="PostDbContext4.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Post1DbContext.edmx</DependentUpon>
-      <LastGenOutput>Post1DbContext.cs</LastGenOutput>
+      <DependentUpon>PostDbContext4.edmx</DependentUpon>
+      <LastGenOutput>PostDbContext4.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

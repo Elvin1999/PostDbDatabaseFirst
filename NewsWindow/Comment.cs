@@ -14,22 +14,22 @@ namespace NewsWindow
     
     public partial class Comment
     {
-        public int No { get; set; } = 0;
         public int Id { get; set; }
         public string Content { get; set; }
         public int User_Id { get; set; }
         public int News_Id { get; set; }
+        public int No { get; set; } = 0;
         public Comment Clone()
         {
             Comment comment = new Comment()
             {
-                 Content=this.Content,
-                  Id=this.Id,
-                   //News=this.News,
-                    News_Id=this.News_Id,
-                     No=this.No,
-                    //  User=this.User,
-                       User_Id=this.User_Id
+                Content = this.Content,
+                Id = this.Id,
+                //News=this.News,
+                News_Id = this.News_Id,
+                No = this.No,
+                //  User=this.User,
+                User_Id = this.User_Id
             };
             return comment;
         }

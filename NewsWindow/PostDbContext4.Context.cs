@@ -13,10 +13,10 @@ namespace NewsWindow
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PostDbEntities4 : DbContext
+    public partial class PostDbEntities5 : DbContext
     {
-        public PostDbEntities4()
-            : base("name=PostDbEntities4")
+        public PostDbEntities5()
+            : base("name=PostDbEntities5")
         {
         }
     

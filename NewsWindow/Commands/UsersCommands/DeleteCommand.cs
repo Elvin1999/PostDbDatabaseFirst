@@ -26,16 +26,16 @@ namespace NewsWindow.Commands.UsersCommands
 
         public void Execute(object parameter)
         {
-            using (PostDbEntities4 cashDbContext = new PostDbEntities4())
+            using (PostDbEntities5 cashDbContext = new PostDbEntities5())
             {
 
                 List<string> errorMessages = new List<string>();
-                //bool oldvalid = cashDbContext.Configuration.ValidateOnSaveEnabled;
+                bool oldvalid = cashDbContext.Configuration.ValidateOnSaveEnabled;
                 try
                 {
-                    //cashDbContext.Configuration.ValidateOnSaveEnabled = false;
-                var item = UserViewModel.SelectedUser;
-                    //cashDbContext.Users.Attach(item);
+                    cashDbContext.Configuration.ValidateOnSaveEnabled = false;
+                    var item = UserViewModel.SelectedUser;
+                    cashDbContext.Users.Attach(item);
                     cashDbContext.Entry(item).State = EntityState.Deleted;
                     cashDbContext.SaveChanges();
                     UserViewModel.AllUsers.Remove(item);

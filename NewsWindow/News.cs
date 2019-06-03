@@ -19,27 +19,26 @@ namespace NewsWindow
         {
             this.Comments = new HashSet<Comment>();
         }
-        public int No { get; set; } = 0;
+    
         public int Id { get; set; }
+        public int No { get; set; } = 0;
         public string Comment { get; set; }
         public string Header { get; set; }
         public System.DateTime CreateDate { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
-
         public News Clone()
         {
             News news = new News()
             {
-                 Comment=this.Comment,
+                Comment = this.Comment,
                 // Comments=this.Comments
-                 CreateDate=this.CreateDate,
-                  Header=this.Header,
-                   Id=this.Id,
-                    No=this.No
+                CreateDate = this.CreateDate,
+                Header = this.Header,
+                Id = this.Id,
+                No = this.No
             };
             return news;
         }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }
