@@ -1,6 +1,8 @@
 ﻿using NewsWindow.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +26,14 @@ namespace NewsWindow.Commands.UsersCommands
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            
+            using (PostDbEntities5 DbContext = new PostDbEntities5())
+            {
+
+                DbContext.Entry(UserViewModel.CurrentUser).State = EntityState.Modified;
+                DbContext.SaveChanges();
+                UserViewModel.AllUsers = new ObservableCollection<User>(DbContext.Users.ToList());
+            }
         }
     }
 }
